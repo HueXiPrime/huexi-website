@@ -18,20 +18,17 @@
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 }
 @font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-regular.woff") format("woff");
+  font-family: "Inter";
+  src: url("/fonts/inter-subset.woff2") format("woff2");
+  /* src: url("/fonts/sohne-subset-0.woff2") format("woff2"); */
+  /* src: url("/fonts/newsreader-subset-0.woff2") format("woff2"); */
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
