@@ -1,0 +1,134 @@
+@font-face {
+  font-family: Inter;
+  font-display: block;
+  src: url(/fonts/inter-subset.woff2) format("woff2");
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: Newsreader;
+  font-display: block;
+  src: url(/fonts/newsreader-subset-0.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Sohne;
+  font-display: block;
+  src: url(/fonts/sohne-subset-0.woff2) format("woff2");
+  font-weight: 400;
+}
+
+[basics-text] {
+  margin: 0;
+}
+
+[basics-text][basics-variant-weight="100"] {
+  font-weight: 100;
+}
+
+[basics-text][basics-variant-weight="200"] {
+  font-weight: 200;
+}
+
+[basics-text][basics-variant-weight="300"] {
+  font-weight: 300;
+}
+
+[basics-text][basics-variant-weight="400"] {
+  font-weight: 400;
+}
+
+[basics-text][basics-variant-weight="500"] {
+  font-weight: 500;
+}
+
+[basics-text][basics-variant-weight="600"] {
+  font-weight: 600;
+}
+
+[basics-text][basics-variant-weight="700"] {
+  font-weight: 700;
+}
+
+[basics-text][basics-variant-weight="800"] {
+  font-weight: 800;
+}
+
+[basics-text][basics-variant-weight="900"] {
+  font-weight: 900;
+}
+
+[basics-text][basics-variant-align="left"] {
+  text-align: left;
+}
+
+[basics-text][basics-variant-align="center"] {
+  text-align: center;
+}
+
+[basics-text][basics-variant-align="right"] {
+  text-align: right;
+}
+
+[basics-text][basics-variant-transform="uppercase"] {
+  text-transform: uppercase;
+}
+
+[basics-text][basics-variant-transform="lowercase"] {
+  text-transform: lowercase;
+}
+
+[basics-text][basics-variant-transform="capitalize"] {
+  text-transform: capitalize;
+}
+
+[basics-text][basics-variant-break="break-all"] {
+  word-break: break-all;
+}
+
+[basics-text][basics-variant-break="break-word"] {
+  word-break: break-word;
+}
+
+[basics-text][basics-variant-clamp=""] {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  max-width: 100%;
+  min-width: 0;
+}
+[basics-text][basics-variant~="tnum"] {
+  font-feature-settings: "tnum" 1;
+}
+[basics-text][basics-color="lowcontrast"],
+[basics-text][basics-color="lowcontrast"] * {
+  color: var(--mono9);
+}
+[basics-text][basics-size="small"] {
+  font: var(--type-s);
+}
+[basics-text][basics-variant-clamp="_"] {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: var(--clamp-lines);
+  -webkit-box-orient: vertical;
+}
+
+[basics-heading],
+[basics-prose] :where(h1, h2, h3, h4, h5, h6) {
+  font: var(--type-heading);
+  font-feature-settings: "kern", "calt", "case";
+}
+
+[basics-prose] p,
+[basics-text] {
+  letter-spacing: 0;
+  font-size: var(--text);
+  line-height: var(--leading);
+  font-feature-settings: "kern", "frac", "kern", "ss02";
+}

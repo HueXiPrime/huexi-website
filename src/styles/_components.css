@@ -1,0 +1,400 @@
+[basics-css-icon] {
+  --mask: var(--ON);
+  --icon: var(--mask, var(--icon));
+  display: inline-block;
+  -webkit-mask: var(--mask, invalid) var(--icon);
+  mask: var(--mask, invalid) var(--icon);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  background-color: var(--mask, invalid) currentColor;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+[basics-list] {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+[basics-css-icon] {
+  --size: 1.125em;
+  height: var(--size);
+  width: var(--size);
+  vertical-align: text-top;
+}
+
+[data-icon="arrow-left-right"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="house"] {
+  --mask: var(--OFF);
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="approved"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="sparkles"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="search"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="arrowLeftStop"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="arrowUpLeft"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="repeat"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="pause"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="play"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="close-fullscreen"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="fullscreen"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="speak-zzz"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="speak-3"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="waveform"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="waveform-path"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="asterisk"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="merge"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="dotted-circle"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="ar"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="command"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="doc-text-long"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="doc-text-short"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="doc-text"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="cross"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="arrow-up-right"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="arrow-right"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="arrow-left-curve"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="list-bullet"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="list-check"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="doc-copy"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="file-menu"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="edit"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="paragraph"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="lock"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="chevron-right"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+[data-icon="bell-slash"] {
+  --icon: url("data:image/svg+xml,%3Csvg ...");
+}
+
+/* Additional component examples */
+.css-sibling-example {
+  border-radius: var(--radius);
+  justify-content: center;
+  padding: var(--gap);
+}
+
+.css-sibling-example,
+.css-sibling-example .container,
+.css-sibling-example input {
+  display: flex;
+  align-items: center;
+}
+
+.css-sibling-example input {
+  height: 2.5rem;
+  font-size: 1rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--mono5);
+  padding: 0 var(--gap-s);
+  outline: none;
+  transition: border-color var(--transition);
+  justify-content: center;
+  margin: 0;
+}
+
+.css-sibling-example input:focus {
+  border-color: var(--mono11);
+}
+
+.css-sibling-example .prefix {
+  background: var(--mono3);
+  border-radius: var(--radius) 0 0 var(--radius);
+  padding: 0 var(--gap-s);
+  height: 2.5rem;
+  font-size: 1rem;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--mono5);
+  border-right: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: var(--mono11);
+  transition: color var(--transition);
+  margin: 0;
+}
+
+.css-sibling-example .container.fixed input {
+  order: 1;
+}
+
+:focus:is(.css-sibling-example .container.fixed input) + .prefix {
+  color: var(--fg);
+  border-color: var(--mono11);
+}
+
+.css-sibling-example .container.fixed .prefix {
+  order: 0;
+}
+
+.custom-underlines-example {
+  background: var(--mono1);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-size: 1.25rem;
+  color: var(--fg);
+  text-align: center;
+}
+
+.custom-underlines-example span {
+  background-image: linear-gradient(var(--mono9), var(--mono9));
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+
+.custom-underlines-example[data-example~="2"] span {
+  background-position: left 1.05em;
+}
+
+.custom-underlines-example[data-example~="3"] span {
+  text-shadow: 0.1em 0 var(--mono1), -0.1em 0 var(--mono1);
+}
+
+.custom-underlines-example[data-example~="4"] span {
+  background-size: 100% 0.25em;
+}
+
+.custom-underlines-example[data-example~="5"] span {
+  background: repeating-linear-gradient(
+    to right,
+    var(--mono9) 0,
+    var(--mono9) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  background-repeat: repeat-x;
+  background-size: 1ch 1px;
+  background-position: 0 100%;
+}
+
+.custom-underlines-example[data-example~="6"] span {
+  background-size: 2ch 1px;
+}
+
+[data-animation-controller="false"] [data-animate] {
+  animation: none;
+}
+
+[data-animate] {
+  --stagger: 0;
+  --delay: 120ms;
+  --start: 0ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-animate] {
+    animation: enter 0.6s both;
+    animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
+  }
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.stack {
+  display: flex;
+}
+
+.stack > * + * {
+  margin-left: 32px;
+}
+
+.column {
+  width: 192px;
+}
+
+.column > div {
+  margin-top: 12px;
+}
+
+:is(.column > div) > * + * {
+  margin-top: 24px;
+}
+
+.email:before {
+  content: "p@paco.me";
+}
+
+/* Footer Clock Component */
+.footer_clock {
+  --seconds-deg: calc((var(--now-s) / 60) * 360);
+  --minutes-deg: calc(((var(--now-m) / 60) * 360) + ((var(--now-s) / 60) * 6));
+  --hours-deg: calc(((var(--now-h) / 12) * 360) + ((var(--now-m) / 60) * 30));
+  --width: 1px;
+  --color: var(--mono9);
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--mono8);
+  position: relative;
+  transform: rotate(180deg);
+  margin: 0;
+  margin-left: var(--gap-2x);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_clock > * {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - var(--width) / 2);
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--color);
+  border-radius: calc(var(--width) / 2);
+  transform-origin: center 0;
+}
+
+.footer_clock:before {
+  content: "";
+  width: 0.5px;
+  height: 0.5px;
+  background: var(--color);
+  position: absolute;
+  z-index: 1234;
+  border-radius: 50%;
+}
+
+.footer_second {
+  --height: 8px;
+  --width: 0.5px;
+  transform: rotate(calc(var(--seconds-deg) * 1deg));
+}
+
+.footer_minute {
+  --height: 7px;
+  transform: rotate(calc(var(--minutes-deg) * 1deg));
+}
+
+.footer_hour {
+  --height: 5px;
+  transform: rotate(calc(var(--hours-deg) * 1deg));
+}
