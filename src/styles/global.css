@@ -19,8 +19,20 @@
 }
 @font-face {
   font-family: "Inter";
-  /* src: url("/fonts/inter-subset.woff2") format("woff2"); */
-  /* src: url("/fonts/sohne-subset-0.woff2") format("woff2"); */
+  src: url("/fonts/inter-subset.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sohne";
+  src: url("/fonts/sohne-subset-0.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Newsreader";
   src: url("/fonts/newsreader-subset-0.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;

@@ -1,3 +1,11 @@
+TODO LIST
+
+- [ ] Clean up footer
+- [ ] Create Header with sections
+  - [ ] Home (left aligned)
+  - [ ] Blog
+  - [ ] Projects
+
 # Astro Starter Kit: Blog
 
 ```sh
