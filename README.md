@@ -3,6 +3,7 @@ TODO LIST
 - [ ] Mobile, footer allows left + right scrolling
 - [ ] Blog > Post Hero Image FAR too big on mobile.
 - [ ] Share Links, need logo and stuff
+- [ ] The spacing between header and p tags on mobile is too large
 
 # Astro Starter Kit: Blog
 
