@@ -44,8 +44,6 @@ footer {
   width: 100%;
   background: var(--bg);
   z-index: var(--layer-header);
-  padding: 0 var(--body-margin-left);
-  margin: 0 calc(-1 * var(--body-margin-left));
   box-sizing: border-box;
 }
 
@@ -55,7 +53,8 @@ footer > div {
   display: flex;
   align-items: center;
   height: 100%;
-  white-space: nowrap;
+  padding: 0 1rem;
+  overflow-x: hidden;
 }
 
 footer > div > :first-child {
@@ -63,9 +62,14 @@ footer > div > :first-child {
 }
 
 @media (max-width: 768px) {
-  footer {
-    padding: 0 1rem;
-    margin: 0 -1rem;
+  footer > div {
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 0.5rem;
+  }
+
+  footer > div > :last-child {
+    margin-left: auto;
   }
 }
 

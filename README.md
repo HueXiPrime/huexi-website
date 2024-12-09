@@ -1,10 +1,7 @@
 TODO LIST
 
-- [ ] Clean up footer
-- [ ] Create Header with sections
-  - [ ] Home (left aligned)
-  - [ ] Blog
-  - [ ] Projects
+- [ ] Mobile, footer allows left + right scrolling
+- [ ] Blog > Post Hero Image FAR too big on mobile.
 
 # Astro Starter Kit: Blog
 
