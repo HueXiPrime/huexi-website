@@ -92,14 +92,13 @@
   word-break: break-word;
 }
 
-[basics-text][basics-variant-clamp=""] {
-  display: inline-block;
+[basics-text][basics-variant-clamp="_"] {
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-  max-width: 100%;
-  min-width: 0;
+  -webkit-line-clamp: var(--clamp-lines);
+  line-clamp: var(--clamp-lines);
+  -webkit-box-orient: vertical;
 }
 [basics-text][basics-variant~="tnum"] {
   font-feature-settings: "tnum" 1;
@@ -116,6 +115,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: var(--clamp-lines);
+  line-clamp: var(--clamp-lines);
   -webkit-box-orient: vertical;
 }
 
