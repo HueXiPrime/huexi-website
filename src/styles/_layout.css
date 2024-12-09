@@ -221,3 +221,15 @@
 [basics-skeleton] > * {
   visibility: hidden;
 }
+
+@media (max-width: 768px) {
+  [basics-prose] {
+    padding: 0 var(--gap-2x);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  [basics-prose] > :not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
