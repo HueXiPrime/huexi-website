@@ -1,22 +1,67 @@
 ---
-const today = new Date();
+const now = new Date();
+const year = now.getFullYear();
+
+// Pad numbers for consistent display
+const pad = (num: number) => String(num).padStart(2, '0');
+const initialHours = pad(now.getHours());
+const initialMinutes = pad(now.getMinutes());
+const initialSeconds = pad(now.getSeconds());
+
+// List of quotes
+const quotes = [
+  "Find flow.",
+  "Pray at the altar of hard work.",
+  "Sit with your ambient ambition.",
+  "Polish your perspective until it gleams.",
+  "Strive quietly, flourish loudly.",
+  "Cultivate patience with each passing second.",
+  "Your focus is your compass, follow it.",
+  "Build truth into your daily ritual.",
+  "Whisper gentle encouragement to your future self.",
+  "In stillness, find direction.",
+  "Refine, redefine, and rise.",
+  "Let curiosity carry you forward.",
+  "Gather courage in private and shine in public."
+];
+
+// Select a random quote on each generation
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
+  <div>
+    <span basics-color="lowcontrast" basics-size="small" basics-text="">
+      {randomQuote}
+    </span>
+    <span basics-variant="tnum" basics-color="lowcontrast" basics-size="small" basics-text="">
+      {year}
+    </span>
+    <div>
+      <div
+        class="footer_clock"
+        aria-hidden="true"
+        style={`--now-h: ${initialHours}; --now-m: ${initialMinutes}; --now-s: ${initialSeconds};`}
+      >
+        <div class="footer_second"></div>
+        <div class="footer_minute"></div>
+        <div class="footer_hour"></div>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline>
+    const clockEl = document.querySelector('.footer_clock');
+
+    if (clockEl) {
+      function updateClock() {
+        const now = new Date();
+        clockEl.style.setProperty('--now-h', String(now.getHours()).padStart(2, '0'));
+        clockEl.style.setProperty('--now-m', String(now.getMinutes()).padStart(2, '0'));
+        clockEl.style.setProperty('--now-s', String(now.getSeconds()).padStart(2, '0'));
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    }
+  </script>
 </footer>
-<style>
-	footer {
-		padding: 2em 1em;
-		color: var(--text-color);
-		text-align: center;
-		width: 100%;
-		margin-top: auto;
-		position: relative;
-		background-color: var(--main-bg);
-		border-top: 1px solid rgba(46, 46, 46, 0.8);
-		font-family: "Sohne", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-		-webkit-font-smoothing: antialiased;
-		z-index: 10;
-	}
-</style>

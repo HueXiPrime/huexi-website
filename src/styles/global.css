@@ -3952,3 +3952,61 @@ apple-scroller-text {
   height: 100%;
   background: blue;
 }
+
+/* Clock */
+.footer_clock {
+  --seconds-deg: calc((var(--now-s) / 60) * 360);
+  --minutes-deg: calc(((var(--now-m) / 60) * 360) + ((var(--now-s) / 60) * 6));
+  --hours-deg: calc(((var(--now-h) / 12) * 360) + ((var(--now-m) / 60) * 30));
+  --width: 1px;
+  --color: var(--mono9);
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--mono8);
+  position: relative;
+  transform: rotate(180deg);
+  margin: 0;
+  margin-left: var(--gap-2x);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_clock > * {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - var(--width) / 2);
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--color);
+  border-radius: calc(var(--width) / 2);
+  transform-origin: center 0;
+}
+
+.footer_clock:before {
+  content: "";
+  width: 0.5px;
+  height: 0.5px;
+  background: var(--color);
+  position: absolute;
+  z-index: 1234;
+  border-radius: 50%;
+}
+
+.footer_second {
+  --height: 8px;
+  --width: 0.5px;
+  transform: rotate(calc(var(--seconds-deg) * 1deg));
+}
+
+.footer_minute {
+  --height: 7px;
+  transform: rotate(calc(var(--minutes-deg) * 1deg));
+}
+
+.footer_hour {
+  --height: 5px;
+  transform: rotate(calc(var(--hours-deg) * 1deg));
+}
