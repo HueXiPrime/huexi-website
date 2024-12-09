@@ -37,10 +37,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         object-fit: cover;
       }
       .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
+        width: var(--content-width);
+        max-width: calc(100% - 1.5rem);
         margin: auto;
-        padding: 1em;
+        padding: 1em 0;
         color: rgb(var(--gray-dark));
       }
       .title {
