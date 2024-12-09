@@ -1,15 +1,13 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+		<div class="internal-links flex justify-center items-center w-full">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/links">Links</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -35,10 +33,14 @@ import { SITE_TITLE } from '../consts';
 		justify-content: space-between;
 	}
 	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
+		padding: 1em 0.5em 0.5em;
+		color: var(--text);
+		border-bottom: .5px solid transparent;
 		text-decoration: none;
+		transition: border-bottom-color 0.2s ease-in-out;
+	}
+	nav a:hover {
+		border-bottom-color: var(--accent);
 	}
 	nav a.active {
 		text-decoration: none;
