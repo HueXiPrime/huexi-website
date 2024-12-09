@@ -2,6 +2,7 @@ TODO LIST
 
 - [ ] Mobile, footer allows left + right scrolling
 - [ ] Blog > Post Hero Image FAR too big on mobile.
+- [ ] Share Links, need logo and stuff
 
 # Astro Starter Kit: Blog
 
