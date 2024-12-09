@@ -41,11 +41,12 @@ footer {
   border-top: 1px solid var(--mono5);
   position: relative;
   height: var(--footer-height);
-  width: calc(100% + var(--body-margin-right) + var(--body-margin-left));
-  left: calc(-1 * var(--body-margin-left));
+  width: 100%;
   background: var(--bg);
   z-index: var(--layer-header);
   padding: 0 var(--body-margin-left);
+  margin: 0 calc(-1 * var(--body-margin-left));
+  box-sizing: border-box;
 }
 
 footer > div {
@@ -59,6 +60,13 @@ footer > div {
 
 footer > div > :first-child {
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0 1rem;
+    margin: 0 -1rem;
+  }
 }
 
 .subfooter {
