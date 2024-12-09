@@ -22,19 +22,25 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       }
       .hero-image {
         width: 100%;
+        max-width: 100vw;
+        margin: 0 auto;
       }
       .hero-image img {
         display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
         margin: 0 auto;
         border-radius: 12px;
         box-shadow: var(--box-shadow);
+        object-fit: cover;
       }
       .prose {
-        width: 100%;
-        max-width: var(--content-width);
+        width: 720px;
+        max-width: calc(100% - 2em);
         margin: auto;
         padding: 1em;
-        color: var(--text-color);
+        color: rgb(var(--gray-dark));
       }
       .title {
         margin-bottom: 1em;
@@ -52,6 +58,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       .last-updated-on {
         font-style: italic;
       }
+      @media (max-width: 768px) {
+        .hero-image {
+          width: 100%;
+          padding: 0 1rem;
+        }
+        .hero-image img {
+          border-radius: 8px;
+        }
+      }
     </style>
   </head>
 
@@ -60,19 +75,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <main>
       <article>
         <div class="hero-image">
-          {heroImage && (
-            <Image
-              src={heroImage.src}
-              width={heroImage.width ?? 1020}
-              height={heroImage.height ?? 510}
-              alt=""
-              format={heroImage.format}
-            />
-          )}
+			{heroImage && (
+				<Image
+				  src={heroImage.src}
+				  width={heroImage.width ?? 1020}
+				  height={heroImage.height ?? 510}
+				  alt=""
+				  format={heroImage.format}
+				/>
+			  )}
         </div>
-        <div class="prose" basics-prose>
+        <div class="prose">
           <div class="title">
-            <h1>{title}</h1>
             <div class="date">
               <FormattedDate date={pubDate} />
               {updatedDate && (
@@ -81,6 +95,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 </div>
               )}
             </div>
+            <h1>{title}</h1>
+            <hr />
           </div>
           <slot />
         </div>
